@@ -105,7 +105,7 @@
       /* TRAD CONTENT END */
       
       
-       /* PAID CONTENT */
+      /* PAID CONTENT */
       #paidContent {
         display: grid;
         grid-template-columns: 50% 50%; 
@@ -129,7 +129,17 @@
       }
       /* PAID CONTENT END */
       
-      
+      /* OTHER CONTENT */
+        #otherContent {
+          display: grid;
+          grid-template-columns: 50% 50%; 
+          margin: 0 0 50px 0;
+        }
+
+        .otherGallery {
+          width: 600px
+        }
+      /* OTHER CONTENT END */
       
       
       /* FOOTER */
@@ -201,7 +211,6 @@
         z-index: 1000;
         cursor: pointer;   
       }
-    
     </style>
     
       
@@ -217,11 +226,11 @@
         <li class="dropdown" style="color:#CC2F5C;" id="worktxt">
           WORK
           <ul class="dropdown-menu">
-            <li ><a href="#">DIGITAL</a></li>
-            <li ><a href="#">TRADITIONAL</a></li>
-            <li ><a href="#">PAID WORK</a></li>
-            <li ><a href="#">PROJECTS</a></li>
-            <li ><a href="#">OTHER</a></li>
+            <li ><a href="#digitalContent">DIGITAL</a></li>
+            <li ><a href="#tradContent">TRADITIONAL</a></li>
+            <li ><a href="#paidContent">PAID WORK</a></li>
+            <li ><a href="#projectContent">PROJECTS</a></li>
+            <li ><a href="#otherContent">OTHER</a></li>
           </ul>
           </li>
         <li>RESUME</li>
@@ -230,7 +239,8 @@
      </div>
     
     <img src="welcome!.png" id="avatar" width="150px" alt="cartoon drawing of this persons portfolio, saying 'welcome, welcome!'"> 
-    
+  
+  <div id="mainContent">
     <h2>
       DIGITAL
     </h2>
@@ -336,7 +346,21 @@
           <img src="placeholder.png" class="projectGallery" alt="placeholder">
         </div>
       </div>
-  
+    
+    <h2>
+      OTHER
+    </h2>
+    
+      <div id="otherContent">
+        <div class="content">   
+            <img src="placeholder.png" class="otherGallery" alt="placeholder">
+        </div>
+
+        <div class="content">   
+          <img src="placeholder.png" class="otherGallery"  alt="placeholder">
+        </div>
+    
+    </div>
     
     
     <div id="footer">
