@@ -58,6 +58,8 @@
         top: 0px;
         white-space: nowrap; 
         z-index: 1000;
+        
+  
       }
   
       #header li {
@@ -68,7 +70,6 @@
         display: inline; 
         margin: 0 50px 0 0px;
         position: relative;
-        /*border: 1px solid red;*/
         top: 10px;
         cursor: pointer;
       }
@@ -166,22 +167,26 @@
       
       
       /* DROPDOWN*/ 
+      
       .dropdown {
         position: relative;
+    
+        
       }
 
       .dropdown-menu {
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 1001; 
-        top: 70px;
-        left: 8px;
+        top: 50px;
+        left: -755px;
         padding-bottom: 25px;
         text-align: center;
         margin: 0px 0px 0px 90px;
         background-color: #65FFDB;
         white-space: nowrap; 
         list-style: none;
+        outline: 1px solid red;
       }
    
 
@@ -191,6 +196,7 @@
         padding: 0px 0px 0px 0px;  
         font-size: 10px;
         color: #282342;
+        outline: 1px solid red;
       }
 
 
@@ -238,7 +244,7 @@
       </ul>
      </div>
     
-    <img src="welcome!.png" id="avatar" width="150px" alt="cartoon drawing of this persons portfolio, saying 'welcome, welcome!'"> 
+    <img src="placeholder.png" id="avatar" width="150px" alt="cartoon drawing of this persons portfolio, saying 'welcome, welcome!'"> 
   
     <h2 id="digitalEnter">
       DIGITAL
@@ -406,12 +412,12 @@
 
   // assign click events
   document.getElementById('worktxt').addEventListener('click', () => {
-  avatarImg.src = '2clickWork.png';
+  avatarImg.src = 'placeholder.png';
   });
     
    document.getElementById('avatar').addEventListener('click', (e) => {
   e.stopPropagation();  
-  avatarImg.src = 'hideAva.png';
+  avatarImg.src = 'placeholder.png';
   });
     
 
