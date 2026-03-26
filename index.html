@@ -488,16 +488,21 @@
   }
   });
     
-document.addEventListener("click", function(event) {
+  document.addEventListener("click", function(event) { //if clicking on paid work, projects, or other, open detailed overlay
 
-  if (event.target.matches(".digitalGallery, .tradGallery, .paidGallery, .projectGallery, .otherGallery")) {
-
-    overlayImg.src = event.target.src;
-    overlay.style.display = "flex";
-
-  }
-
-});
+    if (event.target.matches(".paidGallery, .projectGallery, .otherGallery")) {
+      overlayImg.src = event.target.src;
+      overlay.style.display = "flex";
+    }
+  });
+    
+  // Close overlay if clicking outside content
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.style.display = "none";
+    }
+  });
+    
     
   document.addEventListener("keydown", function(event) {  // hide ava when clicking h
 
@@ -524,13 +529,7 @@ document.addEventListener("click", function(event) {
   });
     
 
-  // Close overlay if clicking outside content
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) {
-      overlay.style.display = "none";
-    }
-  });
-    
+
 
 </script>
   
