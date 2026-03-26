@@ -45,7 +45,7 @@
         font-family: Krub;
         color: #65FFDB;
         font-size: 25px;
-        width: 50%; 
+        
       }
       /* general styling END */
       
@@ -217,11 +217,90 @@
         z-index: 1000;
         cursor: pointer;   
       }
+      
+      /* OVERLAY PAGE */ 
+      
+      #overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5); 
+        display: none;   
+        justify-content: center; 
+        align-items: center;
+        z-index: 10000;  
+      }
+      
+      #overlayContent {
+        background-color: #322C4D;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 1200px;
+        max-height: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+      
+      .overlayGrid {
+        
+
+      }
+        
+      .overlayGrid:first-child {
+      /*IMG*/
+        width: 600px;
+
+      }
+        
+      .overlayGrid:nth-child(2) {
+      /*TITLE*/
+
+      }
+        
+      .overlayGrid:nth-child(3) {
+      /*FOOTER*/
+      margin-right: -450px;
+      margin-top: -30px;
+      font-size: 19px;
+      
+      text-align: center;
+  
+      }
+      
+       .overlayGrid:nth-child(4) {
+      /*TEXT*/
+       margin-top: -80%;
+       margin-left: 20px;
+      text-align: left;
+  
+      }
+
+      /* OVERLAY PAGE END */
+      
     </style>
     
       
   </head>
   <body>
+    
+    <div id="overlay">
+      <div id="overlayContent">
+         <img src="placeholder.png" class="overlayGrid" alt="placeholder">
+         <h2 class="overlayGrid">
+           TITLE
+        </h2>
+        <p class="overlayGrid">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+        </p>
+        <p class="overlayGrid">
+          Lorem ipsum dolor sit amet, corcitation ullamco.
+        </p>
+      </div>
+    </div>
+      
     
     
     <div id="header">
@@ -396,6 +475,9 @@
   // get the avatar image
   const avatarImg = document.getElementById('avatar');
   let avatarVisible = 1;
+    
+  const overlay = document.getElementById("overlay");
+  const digital = document.getElementById("digitalContent");
 
   document.addEventListener("keydown", function(event) {  // hide ava when clicking h
 
@@ -419,6 +501,19 @@
    document.getElementById('avatar').addEventListener('click', (e) => {
   e.stopPropagation();  
   avatarImg.src = 'placeholder.png';
+  });
+    
+    
+  // Open overlay
+  digital.addEventListener("click", () => {
+    overlay.style.display = "flex";
+  });
+
+  // Close overlay if clicking outside content
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.style.display = "none";
+    }
   });
     
 
