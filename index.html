@@ -218,8 +218,7 @@
         cursor: pointer;   
       }
       
-      /* OVERLAY PAGE */ 
-      
+      /* DETAILED OVERLAY PAGE */ 
       #overlayDetailed{
         position: fixed;
         top: 0;
@@ -273,14 +272,51 @@
       text-align: left;
   
       }
-
-      /* OVERLAY PAGE END */
+      /* DETAILED OVERLAY PAGE END */
+      
+      
+        
+      /* DETAILED OVERLAY PAGE */
+      
+      
+       #overlaySimple{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.5); 
+        display: none;   
+        justify-content: center; 
+        align-items: center;
+        z-index: 10000;  
+      }
+      
+      #overlayContentSimple {
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 1200px;
+        max-height: 90%;
+        margin: 0 auto;
+      }
+      
+        
+      /* DETAILED OVERLAY PAGE END */
       
     </style>
     
       
   </head>
   <body>
+    
+    <div id="overlaySimple">
+      <div id="overlayContentSimple">
+        
+        <img src="placeholder.png" id="overlayImgSimple" class="overlayGridSimple" alt="placeholder">
+        
+      </div>
+    </div>
+    
     
     <div id="overlayDetailed">
       <div id="overlayContentDetailed">
@@ -328,7 +364,7 @@
     <div id="digitalContent">
       
       <div class="content">   
-          <img src="placeholder.png" class="digitalGallery" alt="placeholder">
+          <img src="mobile.png" class="digitalGallery" alt="placeholder">
       </div>
   
       <div class="content">   
@@ -472,10 +508,14 @@
   const avatarImg = document.getElementById('avatar');
   let avatarVisible = 1;
     
-  const overlay = document.getElementById("overlayDetailed");
   const digital = document.getElementById("digitalContent");
   const project = document.getElementById("projectContent");
+    
+  const overlay = document.getElementById("overlayDetailed");
   const overlayImg = document.getElementById("overlayImgDetailed");
+    
+  const overlaySimple = document.getElementById("overlaySimple");
+  const overlayImgSimple = document.getElementById("overlayImgSimple");
     
   let currentImg = "";
     
@@ -504,6 +544,26 @@
   });
     
     
+  //SIMPLE OVERLAY
+    
+  document.addEventListener("click", function(event) { //if clicking on Digital or trad, simple overlay appears
+
+    if (event.target.matches(".digitalGallery, .tradGallery")) {
+      overlayImgSimple.src = event.target.src;
+      overlaySimple.style.display = "flex";
+    }
+  });
+    
+  overlaySimple.addEventListener("click", (e) => {
+    if (e.target === overlaySimple) {
+      overlaySimple.style.display = "none";
+    }
+  });
+    
+ 
+    
+    
+ //AVATAR STUFF   
   document.addEventListener("keydown", function(event) {  // hide ava when clicking h
 
     if (event.key === "h" || event.key === "H") {
