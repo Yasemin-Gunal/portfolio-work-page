@@ -220,7 +220,7 @@
       
       /* OVERLAY PAGE */ 
       
-      #overlay{
+      #overlayDetailed{
         position: fixed;
         top: 0;
         left: 0;
@@ -233,7 +233,7 @@
         z-index: 10000;  
       }
       
-      #overlayContent {
+      #overlayContentDetailed {
         background-color: #322C4D;
         padding: 30px;
         border-radius: 10px;
@@ -244,23 +244,18 @@
         grid-template-columns: 50% 50%;
       }
       
-      .overlayGrid {
-        
-
-      }
-        
-      .overlayGrid:first-child {
+      .overlayGridDetailed:first-child {
       /*IMG*/
         width: 600px;
 
       }
         
-      .overlayGrid:nth-child(2) {
+      .overlayGridDetailed:nth-child(2) {
       /*TITLE*/
 
       }
         
-      .overlayGrid:nth-child(3) {
+      .overlayGridDetailed:nth-child(3) {
       /*FOOTER*/
       margin-right: -450px;
       margin-top: -30px;
@@ -270,7 +265,7 @@
   
       }
       
-       .overlayGrid:nth-child(4) {
+       .overlayGridDetailed:nth-child(4) {
       /*TEXT*/
        margin-top: -80%;
        margin-left: 20px;
@@ -286,16 +281,16 @@
   </head>
   <body>
     
-    <div id="overlay">
-      <div id="overlayContent">
-         <img src="placeholder.png" class="overlayGrid" alt="placeholder">
-         <h2 class="overlayGrid">
+    <div id="overlayDetailed">
+      <div id="overlayContentDetailed">
+         <img src="placeholder.png" class="overlayGridDetailed" alt="placeholder">
+         <h2 class="overlayGridDetailed">
            TITLE
         </h2>
-        <p class="overlayGrid">
+        <p class="overlayGridDetailed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
         </p>
-        <p class="overlayGrid">
+        <p class="overlayGridDetailed">
           Lorem ipsum dolor sit amet, corcitation ullamco.
         </p>
       </div>
@@ -476,7 +471,7 @@
   const avatarImg = document.getElementById('avatar');
   let avatarVisible = 1;
     
-  const overlay = document.getElementById("overlay");
+  const overlay = document.getElementById("overlayDetailed");
   const digital = document.getElementById("digitalContent");
 
   document.addEventListener("keydown", function(event) {  // hide ava when clicking h
