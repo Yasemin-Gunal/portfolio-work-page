@@ -244,7 +244,7 @@
         grid-template-columns: 50% 50%;
       }
       
-      .overlayGridDetailed:first-child {
+      .overlayGridDetailed {
       /*IMG*/
         width: 600px;
 
@@ -258,6 +258,7 @@
       .overlayGridDetailed:nth-child(3) {
       /*FOOTER*/
       margin-right: -450px;
+      
       margin-top: -30px;
       font-size: 19px;
       
@@ -283,13 +284,13 @@
     
     <div id="overlayDetailed">
       <div id="overlayContentDetailed">
-         <img src="placeholder.png" class="overlayGridDetailed" alt="placeholder">
+         <img src="placeholder.png" id="overlayImgDetailed" class="overlayGridDetailed" alt="placeholder">
          <h2 class="overlayGridDetailed">
            TITLE
         </h2>
-        <p class="overlayGridDetailed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-        </p>
+        
+        <p class="overlayGridDetailed"></p>
+        
         <p class="overlayGridDetailed">
           Lorem ipsum dolor sit amet, corcitation ullamco.
         </p>
@@ -409,7 +410,7 @@
     
       <div id="projectContent">
         <div class="content">   
-            <img src="placeholder.png" class="projectGallery" alt="placeholder">
+            <img src="mobile.png" class="projectGallery" alt="placeholder">
         </div>
 
         <div class="content">   
@@ -473,7 +474,31 @@
     
   const overlay = document.getElementById("overlayDetailed");
   const digital = document.getElementById("digitalContent");
+  const project = document.getElementById("projectContent");
+  const overlayImg = document.getElementById("overlayImgDetailed");
+    
+  let currentImg = "";
+    
+ //AI was used to figure out how to attatch an image path to a variable and use it to change the overlay img
+  document.addEventListener("click", function(event) { //get recently clicked img
+  if (event.target.tagName === "IMG") {
+    let fullPath = event.target.src;          // full URL
+    currentImg = fullPath.split("/").pop();   // extract filename
+    console.log(currentImg);
+  }
+  });
+    
+document.addEventListener("click", function(event) {
 
+  if (event.target.matches(".digitalGallery, .tradGallery, .paidGallery, .projectGallery, .otherGallery")) {
+
+    overlayImg.src = event.target.src;
+    overlay.style.display = "flex";
+
+  }
+
+});
+    
   document.addEventListener("keydown", function(event) {  // hide ava when clicking h
 
     if (event.key === "h" || event.key === "H") {
@@ -498,11 +523,6 @@
   avatarImg.src = 'placeholder.png';
   });
     
-    
-  // Open overlay
-  digital.addEventListener("click", () => {
-    overlay.style.display = "flex";
-  });
 
   // Close overlay if clicking outside content
   overlay.addEventListener("click", (e) => {
