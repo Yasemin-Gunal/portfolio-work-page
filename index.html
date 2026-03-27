@@ -82,20 +82,21 @@
       
       /* DIGITAL ART CONTENT */
       #digitalContent {
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%; 
-        margin: 0 auto;
+        column-count: 4;
+        column-gap: 20px;
+        margin: auto;
+        padding: 0 30px;
         
       }
       
       .digitalGallery {
-        max-width: 450px;
-        padding: 10px;
-        margin: 0 auto;
+        break-inside: avoid;
+        margin-bottom: 20px;
+        width: 100%;
       }
       
       #digitalContent> * {
-        margin: auto auto;
+        /* margin: auto auto;*/
         cursor: pointer;
       }
       /* DIGITAL CONTENT END */
