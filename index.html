@@ -27,8 +27,10 @@
         font-family: Koho; 
         color: #CC2F5C;
         font-size: 65px;
-        width: 50%;
-        margin: 20px auto;
+
+        margin: 0px auto;
+      
+
       }
       
       
@@ -93,11 +95,9 @@
         break-inside: avoid;
         margin-bottom: 20px;
         width: 100%;
-      }
-      
-      #digitalContent> * {
         cursor: pointer;
       }
+      
       /* DIGITAL CONTENT END */
       
       
@@ -114,27 +114,33 @@
         break-inside: avoid;
         margin-bottom: 20px;
         width: 100%;
-      }
-      
-      #tradGallery> * {
         cursor: pointer;
       }
+      
+
       /* TRAD CONTENT END */
       
       
       /* PAID CONTENT */
-      #paidContent {
-        display: grid;
-        grid-template-columns: 50% 50%; 
-        margin: 0 auto;
+      #paidContentComms, #paidContentSales {
+        column-count: 4;
+        column-gap: 20px;
+        margin: auto;
+        padding: 0 30px;
+        
       }
       
       .paidGallery {
-        width: 600px
+        break-inside: avoid;
+        margin-bottom: 20px;
+        width: 100%;
+        cursor: pointer;
       }
+      
+
       /* PAID CONTENT END */
       
-       /* PAID CONTENT */
+       /* PROJECT CONTENT */
       #projectContent {
         display: grid;
         grid-template-columns: 50% 50%; 
@@ -144,7 +150,7 @@
       .projectGallery {
         width: 600px
       }
-      /* PAID CONTENT END */
+      /* PROJECT CONTENT END */
       
       /* OTHER CONTENT */
         #otherContent {
@@ -472,7 +478,7 @@
     
     
     
-    
+  
      <h1 id="paidEnter">
       PAID WORK
     </h1>
@@ -482,10 +488,11 @@
       </h2>
     
     <div id="paidContentComms">
-      <div class="paidContent1">   
-          <img src="placeholder.png" class="paidGallery" alt="placeholder">
+      
+      <div class="content">
+        <img src="placeholder.png" class="paidGallery" alt="placeholder">
       </div>
-  
+      
       <div class="content">   
         <img src="placeholder.png" class="paidGallery"  alt="placeholder">
       </div>
@@ -504,7 +511,8 @@
       </h2>
     
     <div id="paidContentSales">
-      <div class="paidContent2">   
+      
+      <div class="content">   
           <img src="placeholder.png" class="paidGallery" alt="placeholder">
       </div>
   
@@ -520,7 +528,6 @@
         <img src="placeholder.png" class="paidGallery" alt="placeholder">
       </div>
     </div>
-    
     
     
     
