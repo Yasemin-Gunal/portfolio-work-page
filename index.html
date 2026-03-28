@@ -695,8 +695,8 @@
   const avatarImg = document.getElementById('avatar');
   let avatarVisible = 1;
     
-  const digital = document.getElementById("digitalContent");
-  const project = document.getElementById("projectContent");
+  // const digital = document.getElementById("digitalContent");
+  // const project = document.getElementById("projectContent");
     
   const overlay = document.getElementById("overlayDetailed");
   const overlayImg = document.getElementById("overlayImgDetailed");
@@ -767,12 +767,12 @@
 
   // assign click events
   document.getElementById('worktxt').addEventListener('click', () => {
-  avatarImg.src = 'placeholder.png';
+  avatarImg.src = '2clickWorkAva.png';
   });
     
    document.getElementById('avatar').addEventListener('click', (e) => {
   e.stopPropagation();  
-  avatarImg.src = 'placeholder.png';
+  avatarImg.src = 'hideAva.png';
   });
     
 
