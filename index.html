@@ -544,7 +544,7 @@
       </h2>
     
       <div class="content">   
-        <img src="sslwa.PNG" style=" width: 70%; margin-top:20px; margin-bottom:50px;"  alt="placeholder">
+        <img src="sslwa.PNG" style=" width:70%; margin-top:20px; margin-bottom:50px;" class="styleStudyGallery" alt="placeholder">
       </div> 
     
     <div id="styleStudyContent">  
@@ -709,7 +709,7 @@
         </div>
 
         <div class="content">   
-          <img src="placeholder.png" class="projectGallery"  alt="placeholder">
+          <img src="veggiestrawlogo.png" class="projectGallery"  alt="placeholder">
         </div>
 
         <div class="content">   
@@ -787,13 +787,13 @@
   }
   });
     
-  document.addEventListener("click", function(event) { //if clicking on paid work, projects, or other, open detailed overlay
+//   document.addEventListener("click", function(event) { //if clicking on paid work, projects, or other, open detailed overlay
 
-    if (event.target.matches(".paidGallery, .projectGallery, .otherGallery")) {
-      overlayImg.src = event.target.src;
-      overlay.style.display = "flex";
-    }
-  });
+//     if (event.target.matches(".paidGallery, .projectGallery, .otherGallery")) {
+//       overlayImg.src = event.target.src;
+//       overlay.style.display = "flex";
+//     }
+//   });
     
   // Close overlay if clicking outside content
   overlay.addEventListener("click", (e) => {
@@ -807,7 +807,7 @@
     
   document.addEventListener("click", function(event) { //if clicking on Digital or trad, simple overlay appears
 
-    if (event.target.matches(".digitalGallery, .tradGallery")) {
+    if (event.target.matches(".digitalGallery, .tradGallery, .styleStudyGallery")) {
       overlayImgSimple.src = event.target.src;
       overlaySimple.style.display = "flex";
     }
