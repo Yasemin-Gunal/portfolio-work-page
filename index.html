@@ -213,7 +213,7 @@
       /* AI was used to figure out how to create a hover triggered drop-down menu, such as display:none/flex */
       
       .dropdown {
-        position: relative;
+/*         position: relative; */
       }
 
       .dropdown-menu {
@@ -222,6 +222,10 @@
         z-index: 1001; 
         top: 50px;
         /* left: -755px; */
+
+        left: 50%;
+        transform: translateX(-50%);
+
         padding-bottom: 25px;
         text-align: center;
         margin: 0px 0px 0px 0px;
