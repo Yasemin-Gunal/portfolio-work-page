@@ -163,7 +163,7 @@
       }
       
       .projectGallery {
-        max-width: 80%;
+        width: 70%;
         cursor: pointer;
       }
       /* PROJECT CONTENT END */
@@ -564,12 +564,13 @@
       </div>
       
       <div class="content">   
+        <img src="sscrk.png" class="styleStudyGallery" alt="placeholder">
+      </div> 
+      
+      <div class="content">   
         <img src="sswakfu.PNG" class="styleStudyGallery" alt="placeholder">
       </div>
  
-      <div class="content">   
-        <img src="sscrk.PNG" class="styleStudyGallery" alt="placeholder">
-      </div> 
       
       <div class="content">   
         <img src="ssdst.PNG" class="styleStudyGallery" alt="placeholder">
@@ -613,15 +614,15 @@
         COMMISSIONS
       </h2>
     
+      <div class="content">   
+        <img src="lastSupper.png" style=" width:70%; margin-top:20px; margin-bottom:50px;" class="paidGallery" alt="placeholder">
+      </div> 
+    
     <div id="paidContentComms">
       
       
       <div class="content">   
         <img src="teamR.png" class="paidGallery" alt="Placeholder">
-      </div>
-      
-      <div class="content">   
-        <img src="lastSupper.png" class="paidGallery" alt="placeholder">
       </div>
     
       <div class="content">   
@@ -631,20 +632,25 @@
       <div class="content">   
         <img src="pfp2.png" class="paidGallery" alt="placeholder">
       </div>
+      
+      <div class="content">   
+        <img src="jamcomm.png" class="paidGallery" alt="placeholder">
+      </div>
 
-        
       <div class="content">   
         <img src="espurr.PNG" class="paidGallery" alt="placeholder">
       </div>
+      
+            <div class="content">   
+        <img src="owl.png" class="paidGallery" alt="placeholder">
+      </div>  
+
       
       <div class="content">
         <img src="hina.png" class="paidGallery" alt="placeholder">
       </div>
       
-      
-      <div class="content">   
-        <img src="owl.png" class="paidGallery" alt="placeholder">
-      </div>  
+
         
       <!-- <div class="content">   
         <img src="dnd1.png" class="paidGallery" alt="placeholder">
@@ -811,7 +817,7 @@
     
   document.addEventListener("click", function(event) { //if clicking on Digital or trad, simple overlay appears
 
-    if (event.target.matches(".digitalGallery, .tradGallery, .styleStudyGallery")) {
+    if (event.target.matches(".digitalGallery, .tradGallery, .styleStudyGallery, .paidGallery")) {
       overlayImgSimple.src = event.target.src;
       overlaySimple.style.display = "flex";
     }
