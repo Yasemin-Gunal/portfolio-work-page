@@ -3,7 +3,7 @@
   <head>
     <title>Yasemin Gunal Portfolio work page</title>
     <link rel="icon" type="image/png" href="thumbnail.png">
-    <meta charset="UTF=8">
+    <meta charset="UTF-8">
     <!-- Created by Yasemin Gunal 3/19/2026 -->
     
     <!-- fonts -->
@@ -101,7 +101,7 @@
         column-count: 4;
         column-gap: 20px;
         margin: auto;
-        padding: 0 90px;
+        padding: 0 30px;
         
       }
       
@@ -163,7 +163,7 @@
       }
       
       .projectGallery {
-        width: 70%;
+        max-width: 80%;
         cursor: pointer;
       }
       /* PROJECT CONTENT END */
@@ -434,10 +434,10 @@
     <div id="header">
       <ul>
         <b>
-        <li>HOME</li>
-        <li>ABOUT ME</li>
-        <li class="dropdown" style="color:#CC2F5C;" id="worktxt">
-          WORK
+        <li id="hometxt"><a href="homePage.html">HOME</a></li>
+          <li><a href="aboutMePage.html">ABOUT ME</a></li>
+        <li class="dropdown">
+          <a href="workPage.html" style="color:#CC2F5C;">WORK</a>
           <ul class="dropdown-menu">
             <li ><a href="#digitalEnter">DIGITAL</a></li>
             <li ><a href="#tradEnter">TRADITIONAL</a></li>
@@ -445,7 +445,7 @@
             <li ><a href="#projectEnter">PROJECTS</a></li>
           </ul>
           </li>
-        <li>RESUME</li>
+          <li><a href="resumePage.html">RESUME</a></li>
         </b>
       </ul>
      </div>
@@ -564,13 +564,12 @@
       </div>
       
       <div class="content">   
-        <img src="sscrk.png" class="styleStudyGallery" alt="placeholder">
-      </div> 
-      
-      <div class="content">   
         <img src="sswakfu.PNG" class="styleStudyGallery" alt="placeholder">
       </div>
  
+      <div class="content">   
+        <img src="sscrk.PNG" class="styleStudyGallery" alt="placeholder">
+      </div> 
       
       <div class="content">   
         <img src="ssdst.PNG" class="styleStudyGallery" alt="placeholder">
@@ -614,15 +613,15 @@
         COMMISSIONS
       </h2>
     
-      <div class="content">   
-        <img src="lastSupper.png" style=" width:70%; margin-top:20px; margin-bottom:50px;" class="paidGallery" alt="placeholder">
-      </div> 
-    
     <div id="paidContentComms">
       
       
       <div class="content">   
         <img src="teamR.png" class="paidGallery" alt="Placeholder">
+      </div>
+      
+      <div class="content">   
+        <img src="lastSupper.png" class="paidGallery" alt="placeholder">
       </div>
     
       <div class="content">   
@@ -632,25 +631,24 @@
       <div class="content">   
         <img src="pfp2.png" class="paidGallery" alt="placeholder">
       </div>
-      
-      <div class="content">   
-        <img src="jamcomm.png" class="paidGallery" alt="placeholder">
-      </div>
 
+        
       <div class="content">   
         <img src="espurr.PNG" class="paidGallery" alt="placeholder">
       </div>
-      
-            <div class="content">   
-        <img src="owl.png" class="paidGallery" alt="placeholder">
-      </div>  
-
       
       <div class="content">
         <img src="hina.png" class="paidGallery" alt="placeholder">
       </div>
       
-
+      
+      <div class="content">   
+        <img src="owl.png" class="paidGallery" alt="placeholder">
+      </div>  
+      
+      <div class="content">   
+        <img src="jamComm.png" class="paidGallery" alt="placeholder">
+      </div> 
         
       <!-- <div class="content">   
         <img src="dnd1.png" class="paidGallery" alt="placeholder">
@@ -817,7 +815,7 @@
     
   document.addEventListener("click", function(event) { //if clicking on Digital or trad, simple overlay appears
 
-    if (event.target.matches(".digitalGallery, .tradGallery, .styleStudyGallery, .paidGallery")) {
+    if (event.target.matches(".digitalGallery, .tradGallery, .styleStudyGallery")) {
       overlayImgSimple.src = event.target.src;
       overlaySimple.style.display = "flex";
     }
